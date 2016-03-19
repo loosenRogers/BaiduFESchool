@@ -1,0 +1,51 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>任务4</title>
+<style type="text/css">
+html,body{
+	height: 100%;
+	margin:0;
+}
+.container
+{
+	position: relative;
+	top: 50%;
+	margin-top:-100px;
+	left: 50%;
+	margin-left: -200px;
+	min-width: 400px;
+	width: 400px;
+	height: 200px;
+	background-color: #ccc;
+	overflow: hidden;
+}
+.box-left-top,.box-right-bottom{
+	position: absolute;
+	border-radius: 50px;
+	background-color: #fc0;
+}
+.box-left-top{
+	width: 100px;
+	height: 100px;
+	left: -50px;
+	top:-50px;
+}
+.box-right-bottom{
+	width: 100px;
+	height: 100px;
+	right: -50px;
+	bottom: -50px;
+}
+</style>
+<script type="text/javascript">
+</script>
+</head>
+<body>
+	<div class="container">
+		<div class="box-left-top"></div>
+		<div class="box-right-bottom"></div>
+	</div>
+</body>
+</html>

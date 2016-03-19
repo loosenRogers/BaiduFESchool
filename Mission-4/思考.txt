@@ -1,0 +1,14 @@
+可变高度div的垂直居中显示可以以用display:table和display:table-cell实现；
+display:table用于父级元素；
+display:table-cell用于子元素，并设置其样式为{text-align:center;vertical-align:middle;}；
+子元素中存放用于水平垂直居中的内容；
+若水平垂直居中显示的内容是一个块级元素，还需设置其display为inline-block.
+
+代码样式为：
+<div class="" style="display:table">
+	<div class="" style="display:table-cel,vertical-align:middle text-align:center">
+		<div class="" style="display:inline-block">
+		垂直居中的内容
+		</div>
+	</div>
+</div>

@@ -1,0 +1,70 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>任务4</title>
+<style type="text/css">
+html,body{
+	height: 100%;
+	margin:0;
+}
+.outerbox
+{
+	height:100%;
+	width: 100%;
+	display: table;
+}
+.innerbox{
+	display: table-cell;
+	vertical-align: middle;
+	text-align: center;
+}
+.container
+{
+	width: 400px;
+	padding:50px;
+	min-width: 400px;
+	display: inline-block;
+	position: relative;
+	background-color: #ccc;
+	overflow: hidden;
+}
+.box-left-top,.box-right-bottom{
+	position: absolute;
+	border-radius: 50px;
+	background-color: #fc0;
+}
+.box-left-top{
+	width: 100px;
+	height: 100px;
+	left: -50px;
+	top:-50px;
+}
+.box-right-bottom{
+	width: 100px;
+	height: 100px;
+	right: -50px;
+	bottom: -50px;
+}
+</style>
+</head>
+<body>
+	<div class="outerbox">
+		<div class="innerbox">
+			<div class="container">
+			<div class="box-left-top"></div>
+			<p>高度可变</p>
+			<p>这是一段文字</p>
+			<p>这是一段文字</p>
+			<p>这是一段文字</p>
+			<p>这是一段文字</p>
+			<p>这是一段文字</p>
+			<p>这是一段文字</p>
+			<p>这是一段文字</p>
+			<p>这是一段文字</p>
+			<div class="box-right-bottom"></div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
