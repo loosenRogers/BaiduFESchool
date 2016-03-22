@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>布局</title>
+	<link rel="stylesheet" href="布局.css">
+</head>
+<body>
+	<div class="head">		
+		<ul class="nav">
+			<li><a href="">导航链接1</a></li>
+			<li><a href="">导航链接2</a></li>
+			<li><a href="">导航链接3</a></li>
+			<li><a href="">导航链接4</a></li>
+		</ul>
+		<img src="baiduLogo.png" alt="BaiduLogo">
+	</div>
+	<div class="body clearfix">
+		<div class="right">
+			<h3>表单在此</h3>
+			<form action="">
+				<label for="">请输入邮箱地址</label>
+				<input type="text" width="200px"><br>
+				<label for="" left="50px">邮箱地址请按要求格式输入</label><br>
+				<label for="">请输入密码</label>
+				<input type="password"><br>
+				<label for="">请再次输入密码</label>
+				<input type="password"><br>
+				<label for="">密码请为6-16位英文数字</label><br>
+				<label for="">性别</label>
+				男性：
+				<input type="radio" name="sex" checked="checked">
+				女性：
+				<input type="radio" name="sex"><br>
+				<label for="">城市</label>
+				<select name="cities">
+				<option value="南京">Volvo</option>
+				<option value="成都" selected="selected">Saab</option>
+				<option value="杭州">Fiat</option>
+				<option value="北京">Audi</option>
+				</select><br>
+				<label for="">爱好</label>
+				<input type="checkbox" name="hobbies" value="骑车" checked="checked" />
+				<input type="checkbox" name="hobbies" value="游泳" />
+				<input type="checkbox" name="hobbies" value="爬山" /><br>
+				<label for="">个人描述</label>
+				<textarea name="" id="" cols="30" rows="10"></textarea><br>
+				<button type="submit" id="btnSave">确认提交</button>
+			</form>
+		</div>
+
+		<div class="left">
+			<div class="content">
+				<h2>水了下论坛</h2>
+				<h3>宝宝吓尿了</h3>
+				<h4>现在几点了</h4>
+				<p>我一朋友怀孕了，两家急着赶紧把婚事给办了，日子都定好了。
+就前两天，男方无意中看到了我朋友的微信消息，发现肚子里的孩子不是他的！然后这个奇葩男他！就！悔！婚！了！！
+卧槽，明明就是变心了，非要找个冠冕堂皇的借口！你要是真爱她还在乎亲不亲生吗？是爱情重要还是血缘关系重要？
+女孩子确实有做错的地方，可人家都要跟你结婚了，说明人家已经收心了，人还不能犯个错？
+呵呵，渣男！</p>
+			</div>
+
+			<div class="table">
+				<h2>这边有一个表格</h2>
+				<h4>宝宝被上面的帖子吓尿了，给表加个框压压惊</h4>
+				<table>
+					<tr>
+						<th>表头</th>
+						<th>表头</th>
+						<th>表头</th>
+					</tr>
+					<tr>
+						<td>内容</td>
+						<td>内容</td>
+						<td>内容</td>
+					</tr>
+					<tr>
+						<td>总计</td>
+						<td colspan="2">1000</td>
+						
+					</tr>
+				</table>
+			</div>
+
+			<div class="imageList clearfix">
+				<ul>
+					<li><img src="see_what.jpg" alt=""></li>
+					<li><img src="see_what.jpg" alt=""></li>
+					<li><img src="see_what.jpg" alt=""></li>
+					<li><img src="see_what.jpg" alt=""></li>
+					<li><img src="see_what.jpg" alt=""></li>
+					<li><img src="see_what.jpg" alt=""></li>
+					<li><img src="see_what.jpg" alt=""></li>
+					<li><img src="see_what.jpg" alt=""></li>
+					<li><img src="see_what.jpg" alt=""></li>
+					<li><img src="see_what.jpg" alt=""></li>
+				</ul>
+			</div>
+		</div>
+		
+	</div>
+	<div class="foot">
+		<span>@版权所有</span>
+	</div>
+</body>
+</html>

@@ -1,0 +1,115 @@
+html,body{
+	margin: 0px;
+	padding: 0px;
+	background-color: gray;
+	/*overflow: hidden;*/
+}
+
+.clearfix:after{
+	content: ".";
+	display: block;
+	clear:both;
+	height: 0;
+	overflow: hidden;
+	visibility: hidden;
+}
+
+div.head{
+	width: 100%;
+	background-color: black;
+	color: white;
+}
+
+div.head img{
+	padding-top: 10px;
+	padding-left: 20px;
+}
+
+div.head ul.nav{
+	float: right;
+}
+
+div.head ul.nav li{
+	float: left;
+	margin-left: 30px;
+}
+
+div.head ul.nav li a{
+	color: white;
+	text-decoration: none;
+}
+
+div.head ul.nav li a:hover,
+div.head ul.nav li a:focus{
+	background-color: red;
+}
+
+div.left{
+	margin: 20px;
+	margin-right: 650px;
+}
+
+div.content{
+	margin-bottom: 20px;
+	padding: 10px;
+	background-color: white;
+	box-shadow: 1px 1px 5px black;
+	/*-webkit-box-shadow:1px 1px 5px #999;*/
+}
+
+div.table{
+	padding: 10px;
+	margin-bottom: 20px;
+	background-color: white;
+	box-shadow: 1px 1px 5px black;
+}
+
+div.table table{
+	width: 350px;
+	border: 2px solid black;
+}
+
+div.table table th,
+div.table table td{
+	border: 1px solid #999;
+}
+
+div.imageList{
+	padding: 10px;
+	background-color: white;
+	box-shadow: 1px 1px 5px black;
+}
+
+div.imageList ul{
+	list-style: none;
+}
+
+div.imageList ul li{
+	float: left;
+	margin-right: 20px;
+}
+
+div.imageList ul li img{
+	width: 180px;
+	height: 180px;
+}
+
+div.right{
+	float: right;
+	margin: 20px;
+	margin-top: 0px;
+	width: 600px;
+	text-align: center;
+	background-color: white;
+	box-shadow: 1px 1px 5px black;
+}
+
+div.foot{
+/*	position: absolute;
+	bottom: 0px;*/
+	height: 50px;
+	width: 100%;
+	background-color: black;
+	color: white;
+	text-align: center;
+}
