@@ -389,7 +389,7 @@ li.item:focus>.options,li.item:focus{
 	border: 2px solid #be4f48;
 }
 .select-area li.item:last-child>a{
-		display: inline-block;
+	display: inline-block;
 	width: 235px;
 	height: 36px;
 
@@ -437,7 +437,6 @@ li.item:focus>.options,li.item:focus{
 	position: absolute;
 	box-sizing: border-box;
 	border: 2px solid #dadada;
-
 	background-color: #fff;
 }
 .images-wall>li .img-body>img{
@@ -458,7 +457,6 @@ li.item:focus>.options,li.item:focus{
 	font-size:12px;
 	font-family:'微软雅黑';
 	color:#818282;
-
 	padding-top: 6px;
 }
 .images-wall>li:hover .img-body{

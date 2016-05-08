@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>chapter1-9</title>
+	<link rel="stylesheet" href="task9_2.css">
+</head>
+<body>
+	<!-- 整个页面 -->
+	<div class="main">
+		<!-- 页面头部 -->
+		<div class="head">
+			<img src="" alt="">
+			<input type="text" class="search">
+			<span class="login">登录</span>
+		</div>
+		<!-- 页面侧边栏 -->
+		<div class="sidebar">
+			
+		</div>
+		<!-- 页面主体内容 -->
+		<div class="content">
+			<!-- 主体头部 -->
+			<div class="contentHead">
+				<span class="header"><a href="javascript:void(0)">C站</a></span>
+				<span class="header"><a href="javascript:void(0)">/个人文档</a></span>
+				<span class="header"><a href="javascript:void(0)">/文件一</a></span>
+				<span class="header"><a href="javascript:void(0)">/文档一</a></span>
+			</div>
+			<!--  主体内容部分-->
+			<div class="contentMain">
+				<!-- 条件搜索部分 -->
+				<div class="searchBar clearfix">	
+					<ul class="searchItemsBox left clearfix">
+						<li class="timeSet items selection upItems" tabindex="0">
+							<div class="">
+								<span class="itemIcon">8天</span>
+							</div>	
+							<ul class="options">
+								<li>6天</li>
+								<li>7天</li>
+								<li>8天</li>
+							</ul>
+						</li>
+						<li class="timeLabel items upItems">总耗时</li>
+						<li class="dateSet items selection upItems" tabindex="0">
+							<div class="">
+								<span class="itemIcon">2016-04-01</span>
+							</div>	
+							<ul class="options">
+								<li>2016-04-01</li>
+								<li>2016-04-02</li>
+								<li>2016-04-03</li>
+							</ul>
+						</li>
+						<li class="dateLabel items upItems">日期</li>
+						<li class="buyerSet items selection upItems" tabindex="0">
+							<div class="">
+								<span class="itemIcon">小A</span>
+							</div>	
+							<ul class="options">
+								<li>小A</li>
+								<li>小B</li>
+								<li>小C</li>
+							</ul>
+						</li>
+						<li class="buyerLabel items upItems">买方</li>
+						<li class="itemSet items selection upItems" tabindex="0">
+							<div class="">
+								<span class="itemIcon">第一项</span>
+							</div>	
+							<ul class="options">
+								<li>第二项</li>
+								<li>第二项</li>
+								<li>第二项</li>
+							</ul>
+						</li>
+						<li class="itemLabel items upItems">查询项</li>
+						<li class="dealSet items selection downItems" tabindex="0">
+							<div class="">
+								<span class="itemIcon">10项</span>
+							</div>	
+							<ul class="options">
+								<li>11项</li>
+								<li>12项</li>
+								<li>13项</li>
+							</ul>
+						</li>
+						<li class="dealLabel items downItems">成交项</li>
+						<li class="peopleSet items selection downItems" tabindex="0">
+							<div class="">
+								<span class="itemIcon">10人</span>
+							</div>	
+							<ul class="options">
+								<li>11人</li>
+								<li>12人</li>
+								<li>13人</li>
+							</ul>
+						</li>
+						<li class="peopleLabel items downItems">人数</li>
+						<li class="sellerSet items selection downItems" tabindex="0">
+							<div class="">
+								<span class="itemIcon">小C</span>
+							</div>	
+							<ul class="options">
+								<li>小C</li>
+								<li>小C</li>
+								<li>小C</li>
+							</ul>
+						</li>
+						<li class="sellerLabel items downItems">卖方</li>
+					</ul>
+					<div class="searchBtnBox left">
+						<input type="button" class="searchBtn" value="搜索">
+					</div>
+				</div>
+				<!-- 历史记录部分 -->
+				<div class="history clearfix">
+					<ul class="histList left">
+						<li><a href="javascript:void(0)"></a></li>
+						<li><div class="rmbLogo"><span>10:00am</span><div>1200</div></div></li>
+						<li><div class="rmbLogo"><span>10:00am</span><div>1300</div></div></li>
+						<li><div class="rmbLogo"><span>10:00am</span><div>1200</div></div></li>
+						<li><div class="rmbLogo"><span>10:00am</span><div>1100</div></div></li>
+						<li><div class="rmbLogo"><span>10:00am</span><div>1200</div></div></li>
+						<li><div class="rmbLogo"><span>10:00am</span><div>1200</div></div></li>
+						<li><a href="javascript:void(0)"></a></li>
+					</ul>
+					<div class="histSearch left">
+						<span>历史查询</span>
+					</div>
+				</div>
+				<!-- 数据统计部分 -->
+				<div class="statistics">
+					<div class="dataTitle">2016年4月份统计</div>
+					<div class="dealBox">
+						<ul class="dealList clearfix">
+							<li>
+								<div class="dealData left">
+									<span>133221</span><div>成交量</div>						
+								</div>
+								<div class="colorBox left"></div>
+							</li>
+							<li><div class="dealData left">
+									<span>133221</span><div>成交量</div>						
+								</div>
+								<div class="colorBox left"></div>
+							</li>
+							<li><div class="dealData left">
+									<span>133221</span><div>成交量</div>						
+								</div>
+								<div class="colorBox left"></div>
+							</li>
+							<li><div class="dealData left">
+									<span>133221</span><div>成交量</div>						
+								</div>
+								<div class="colorBox left"></div>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<!-- 工程部分 -->
+				<div class="project clearfix">
+					<!-- 工程Tab页 -->
+					<div class="projItems left">
+						<div class="projHead">第一组项目</div>
+						<div class="projTabs">
+							<div id="c1">
+								<a href="#c1" title="First">First</a> <!-- This is your actual tab and the content is below it !-->
+									<div class="tab-content">  <!-- tab-container > div > div in the CSS !-->
+						            <h3>This is the first tab</h3>
+						            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. porttitor est et rhoncus.Nam ipsum leo, ornare ac volutpat suscipit, convallis eu metus ipsum nunc.</p>
+									<p>Suspendisse at aliquet turpis. Phasellus eu libero euismod leo imperdiet sagittis elementum ut erat. Nam euismod risus at sem consequat vestibulum. </p>
+						            </div>
+							</div>
+						    
+							<div id="c2">
+								<a href="#c2" title="Second">Second</a> <!-- This is your actual tab and the content is below it !-->
+									<div class="tab-content"> <!-- tab-container > div > div in the CSS !-->
+						            <h3>Add as many tabs as you like</h3>
+						            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. porttitor est et rhoncus. Nam ipsum leo, ornare ac volutpat suscipit, convallis eu metus. ipsum nunc.</p>
+									<p>Suspendisse at aliquet turpis. </p>
+						            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. porttitor est et rhoncus. Nam ipsum leo, ornare ac volutpat suscipit, convallis eu metus. ipsum nunc.</p>
+						            </div>
+							</div>
+
+							<div id="c3">
+								<a href="#c3" title="Third">Third</a> <!-- This is your actual tab and the content is below it !-->
+									<div class="tab-content"> <!-- tab-container > div > div in the CSS !-->
+						            <h3>5 Preset Styles &amp; Color Themes</h3>
+						            <p>Consectetur adipiscing elit. porttitor est et rhoncus. Nam ipsum leo, ornare ac volutpat suscipit, convallis eu metus. ipsum nunc.</p>
+									<p>Suspendisse at aliquet turpis. Phasellus eu libero euismod leo imperdiet sagittis elementum ut erat. Nam euismod risus at sem consequat vestibulum. </p>
+						            </div>
+							</div>
+
+							<div id="c4">
+								<a href="#c4" title="Fourth">Fourth</a> <!-- This is your actual tab and the content is below it !-->
+									<div class="tab-content"> <!-- tab-container > div > div in the CSS !-->
+						            <h3>NO Javascript!  NO Images!</h3>
+						            <p>Consectetur adipiscing elit. porttitor est et rhoncus. Nam ipsum leo, ornare ac volutpat suscipit, convallis eu metus. ipsum nunc.</p>
+									<p>Suspendisse at aliquet turpis. Phasellus eu libero euismod leo imperdiet sagittis elementum ut erat.</p>
+						            </div>
+							</div>
+						    
+						    <div id="c5">
+									<div class="tab-content"> <!-- Having a hidden or opening tab is ideal when you don't want last tab to always show first when loading the page !-->
+						            <h3>2 Tab Types - Regular and Newsreel</h3>
+						            <p>If you have an opening tab like this, it should always be last in the list of tabs otherwise it won't show first when the page loads.</p>
+						            <p>Text sometimes overlaps with hidden tabs in IE7 &amp; 8</p>
+						            </div>
+							</div>
+						</div>
+					</div>
+					<!-- 项目细节 -->
+					<div class="projDetail left"></div>
+				</div>
+				<!-- 日历和品牌榜 -->
+				<div class="calAndRank clearfix">
+					<!-- 日历部分 -->
+					<div class="calendar left">
+						<div class="calHead">日历</div>
+						<div class="calBox">
+							<div class="day_names">
+					            <i>Mon</i>
+					            <i>Tue</i>
+					            <i>Wed</i>
+					            <i>Thu</i>
+					            <i>Fri</i>
+					            <i>Sat</i>
+					            <i>Sun</i>
+					          </div>
+
+					          <div class="days">
+					            <b>26</b>
+					            <b>27</b>
+					            <b>28</b>
+					            <b>29</b>
+					            <b>30</b>
+					            <i>1</i>
+					            <i>2</i>
+					            <i>3</i>
+					            <a href="#" class="today">4</a>
+					            <a href="#">5</a>
+					            <a href="#">6</a>
+					            <a href="#">7</a>
+					            <a class="weekend" href="#">8</a>
+					            <a class="weekend" href="#">9</a>
+					            <a href="#">10</a>
+					            <a href="#">11</a>
+					            <a href="#">12</a>
+					            <a href="#">13</a>
+					            <a href="#">14</a>
+					            <a class="weekend" href="#">15</a>
+					            <a class="weekend" href="#">16</a>
+					            <a href="#">17</a>
+					            <a href="#">18</a>
+					            <a href="#">19</a>
+					            <a href="#">20</a>
+					            <a href="#">21</a>
+					            <a class="weekend" href="#">22</a>
+					            <a class="weekend" href="#">23</a>
+					            <a href="#">24</a>
+					            <a href="#">25</a>
+					            <a href="#" class="selected">26</a>
+					            <a href="#">27</a>
+					            <a href="#">28</a>
+					            <a class="weekend" href="#">29</a>
+					            <a class="weekend" href="#">30</a>
+					            <a href="#">31</a>
+					            <s>1</s>
+					            <s>2</s>
+					            <s>3</s>
+					            <s>4</s>
+					            <s>5</s>
+					            <s>6</s>
+					          </div>
+						</div>
+					</div>
+					<!-- 排行榜 -->
+					<div class="rankingList left">
+						<div class="rankHead">汽车行业品牌榜</div>
+						<div class="rankTableBox">
+							<table class="rankTable">
+								<tr>
+									<th>排名</th>
+									<th>品牌</th>
+									<th>搜索指数</th>
+								</tr>
+								<tr>
+									<td>1</td>
+									<td>宝马</td>
+									<td>3434334<span><span></span></span></td>
+								</tr>
+								<tr>
+									<td>2</td>
+									<td>奔驰</td>
+									<td>3434343<span><span></span></span></td>
+								</tr>
+								<tr>
+									<td>1</td>
+									<td>宝马</td>
+									<td>3434334<span><span></span></span></td>
+								</tr>
+								<tr>
+									<td>2</td>
+									<td>奔驰</td>
+									<td>3434343<span><span></span></span></td>
+								</tr>
+								<tr>
+									<td>1</td>
+									<td>宝马</td>
+									<td>3434334<span><span></span></span></td>
+								</tr>
+								<tr>
+									<td>2</td>
+									<td>奔驰</td>
+									<td>3434343<span><span></span></span></td>
+								</tr>
+								<tr>
+									<td>2</td>
+									<td>奔驰</td>
+									<td>3434343<span><span></span></span></td>
+								</tr>
+							</table>
+						</div>
+					</div>
+				</div>
+				
+			</div>
+		</div>
+	</div>
+</body>
+</html>

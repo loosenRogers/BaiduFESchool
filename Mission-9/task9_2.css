@@ -1,0 +1,653 @@
+/*reset*/
+html,body,h1,h2,h3,h4,h5,h6,div,dl,dt,dd,ul,ol,li,p,blockquote,pre,hr,figure,table,caption,th,td,form,fieldset,legend,input,button,textarea,menu{margin:0;padding:0;}
+html,body{
+	width: 100%;
+	height: 100%;
+	/*shutdown the scrollbar,this is very important!*/
+	overflow: hidden;
+}
+
+/*初始化*/
+body{
+	/*padding-top: 70px;*/
+}
+a{
+	text-decoration: none;
+}
+
+ul{
+	list-style: none;
+}
+
+ul.options{
+	display: none;
+	list-style: none;
+}
+
+.selection{
+	border: 1px solid #DEDEDE;
+	margin-right: 2%;
+
+}
+
+.left{
+	float: left;
+}
+.right{
+	float: right;
+}
+/*clearfix*/
+.clearfix:after{
+  content:".";
+  display:block;
+  height:0;
+  clear:both;
+  visibility:hidden
+}
+
+/*整体 .main*/
+/*.main{
+	height: 100%;
+	width: 100%;
+}*/
+
+/*页面头部*/
+.head{
+	position: absolute;
+	top: 0px;
+	height: 70px;
+	line-height: 70px;
+	width: 100%;
+	background-color: #2189BE;
+	vertical-align: middle;
+}
+
+.search{
+	width: 300px;
+	height: 20px;
+	border-radius: 10px;
+	vertical-align: middle;
+}
+
+.login{
+	width: 50px;
+	height: 30px;
+	vertical-align: middle;
+
+}
+
+/*页面侧边栏*/
+.sidebar{
+	position: absolute;
+	top: 70px;
+	left: 0px;
+	bottom: 0px;
+	width: 300px;
+	background-color: #2B2E3D;
+}
+
+/*页面主体*/
+.content{
+	position: absolute;
+	top: 70px;
+	left: 300px;
+	bottom: 0px;
+	right: 0px;
+	background-color: #EDEDEB;
+	overflow: auto;
+}
+
+/*页面主体头部*/
+div.contentHead{
+	background-color: #FFFFFF;
+	line-height: 50px;
+	vertical-align: middle;
+	padding-left: 20px;
+	margin-bottom: 15px;
+}
+
+span.header{
+	height: 30px;
+	width: 50px;
+	text-align: left;
+}
+
+span.header a{
+	color: gray;
+}
+
+span.header a:hover,
+span.header a:focus{
+	color:-webkit-link;
+}
+
+div.contentMain{
+	width: 85%;
+	margin: 0 auto;
+}
+
+div.searchBar{
+	height: 100px;
+	background-color: white;
+	border:1.5px solid #E1E2E6;
+	position: relative;
+	vertical-align: middle;
+	line-height: 100px;
+}
+
+ul.searchItemsBox{
+	width: 80%;
+}
+
+li.items{
+	float: right;
+	/*overflow: hidden;*/
+	vertical-align: middle;
+	line-height: 35px;
+	width: 8%;
+	height: 35px;
+	/*box-sizing这一属性成功的解决了border挡住浮动的问题*/
+	box-sizing:border-box;
+	font-family: '微软雅黑';
+	color: #DEDEDE;
+}
+
+li.upItems{
+	margin-top: 14px;
+	margin-bottom: 2px;
+}
+
+li.downItems{
+	/*margin-top: 2px;*/
+	/*margin-bottom: 10px;*/
+}
+
+/*下拉框区*/
+li.selection{
+	color: black;
+	background-image: url(images/dropdown-arrow.png);
+	background-position: 95% 50%;
+	background-repeat: no-repeat;
+}
+
+li.selection:active,
+li.selection:hover,
+li.selection:focus{
+	background-image: url(images/dropdown-arrow-blue.png);
+}
+
+/*li.selection:active ul.options,*/
+
+li.selection:focus ul.options,
+li.selection:focus{
+	display: block;
+	background-color: #E3E3E3;
+}
+
+li.timeSet{
+	width: 10%;
+}
+
+li.dateSet{
+	width: 18%;
+}
+
+li.buyerSet,li.sellerSet{
+	width: 18%;
+}
+
+li.dealSet{
+	width: 18%;
+}
+
+li.peopleSet{
+	margin-right: 4%;
+}
+
+li.sellerSet{
+	margin-right: 2%;
+}
+
+span.itemIcon{
+	padding-left: 2%;
+}
+
+/*标签区*/
+/*div.timeLabel{
+	width: 8%;
+}*/
+
+
+
+div.searchBtnBox{
+	height: 100%;
+	width: 20%;
+	/*vertical-align: middle;
+	line-height: 100px;*/
+}
+
+div.searchBtnBox input.searchBtn{
+	width:30%;
+	height: 30%;
+	color: white;
+	background-color: #398AC1;
+	vertical-align: middle;
+	border: 0px;
+	border-radius: 2px;
+}
+
+/*历史记录部分*/
+div.history{
+	height: 60px;
+	/*background-color: white;*/
+	border:1.5px solid #E1E2E6;
+	vertical-align: middle;
+	line-height: 60px;
+	margin-top: 10px;
+}
+
+ul.histList{
+	width: 85%;
+	height: 60px;
+	/*background-color: gray;*/
+}
+
+ul.histList li{
+	float: left;
+	background-color: white;
+	width: 14.4%;
+	margin-right: 1%;
+	/*vertical-align: middle;*/
+}
+
+ul.histList li:hover,
+ul.histList li:focus{
+	border-top: 3px solid #4388C9;
+}
+
+ul.histList li:first-child{
+	width: 3%;
+	border-top: 0px;
+}
+
+ul.histList li:first-child a{
+	display: inline-block;
+	width: 100%;
+	height: 17px; 
+	background: url(images/prev-next-icons.png) no-repeat 50% 0;
+	/*background-color: red;*/
+	vertical-align: middle;
+}
+
+ul.histList li:last-child{
+	width: 2.5%;
+	border-top: 0px;
+}
+
+
+ul.histList li:last-child a{
+	display: inline-block;
+	width: 100%;
+	height: 17px; 
+	background: url(images/prev-next-icons.png) no-repeat 50% -17px;
+	/*background-color: red;*/
+	vertical-align: middle;
+}
+
+ul.histList li div.rmbLogo{
+	width: 50%;
+	height: 60px;
+	margin: 0 auto;
+	text-align: center;
+	display: block;
+	line-height: normal;
+}
+
+ul.histList li div.rmbLogo span{
+	line-height: 30px;
+}
+
+ul.histList li div.rmbLogo div{
+	height: 30px;
+	background-image: url(images/rmb-logo.png);
+	background-repeat: no-repeat;
+	background-position: left;
+	font-family: '微软雅黑';
+	font-size: 20px;
+	color: orange;
+}
+
+div.histSearch{
+	width: 15%;
+	height: 60px;
+	background-image: url(images/calender-icon.png);
+	background-repeat: no-repeat;
+	background-position: 20% 50%;
+	background-color: white;
+}
+
+div.histSearch span{
+	margin-left: 40%;
+}
+
+/*成交量统计部分*/
+div.dealBox{
+	height: 80px;
+	width: 100%;
+	/*border:1.5px solid #E1E2E6;*/
+}
+
+div.dealBox ul.dealList li{
+	float: left;
+	width: 22%;
+	height: 80px;
+	margin-right:2%;
+	background-color: white; 
+	padding-left: 1%;
+	border:2px solid #E1E2E6;
+}
+
+div.dealBox ul.dealList li:last-child{
+	margin-right:0;
+}
+
+div.dealBox ul.dealList li div.dealData span{
+	height: 40px;
+	line-height: 40px;
+}
+
+div.dealBox ul.dealList li div.dealData div{
+	height: 40px;
+}
+
+div.dealBox ul.dealList li div.colorBox{
+	display: inline-block;
+	height: 60%;
+	width: 50%;
+	background-color: #42B29C;
+	margin-left: 20%;
+	margin-top: 6%;
+}
+div.dealBox ul.dealList li:first-child{
+	border-left: 3px solid #42B29C;
+}
+
+div.dealBox ul.dealList li:nth-child(2){
+	border-left: 3px solid #398AC1;
+}
+
+div.dealBox ul.dealList li:nth-child(3){
+	border-left: 3px solid #CF4B36;
+}
+
+div.dealBox ul.dealList li:last-child{
+	border-left: 3px solid #E1CD46;
+}
+
+div.dealBox ul.dealList li:nth-child(2) div.colorBox{
+	background-color: #398AC1;
+}
+
+div.dealBox ul.dealList li:nth-child(3) div.colorBox{
+	background-color: #CF4B36;
+}
+
+div.dealBox ul.dealList li:last-child div.colorBox{
+	background-color: #E1CD46;
+}
+
+/*工程项目部分*/
+div.project{
+	width: 100%;
+	height: 450px;
+	/*background-color: orange;*/
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+
+div.projItems{
+	width: 58%;
+	height: 100%;
+	border: 2px solid #E1E2E6;
+	border-radius: 10px;
+	margin-right: 1%;
+}
+
+div.projItems div.projHead{
+	height: 50px;
+	line-height: 50px;
+	vertical-align: middle;
+	background-color:#F4F5F7; 
+	color: #B4B4B4;
+	padding-left: 5%;
+	margin-bottom: 2%;
+}
+
+div.projTabs{
+	width: 90%;
+	margin: 0 auto;
+	position: relative;
+	z-index:0;
+}
+
+.projTabs>div{
+	display: inline;
+}
+
+.projTabs > div > a {  
+	position: relative !important;  /*Keeps the tabs in line with each other */
+	text-decoration: none; 
+	color: #D7D7D7; 
+	display: inline-block;
+	padding: 4px 14px; 
+	font-size:15px;
+	font-family:"Trebuchet MS", Arial, Helvetica, sans-serif;
+	font-weight:bold;
+	text-transform:uppercase;
+	border-radius: 5px 5px 0 0;
+	min-width: 12%;
+	background: #948a81;
+	border: 2px solid #E1E2E6;
+	border-bottom: 0;
+}
+
+.projTabs > div:target > a { 
+    background: white;
+}	
+
+.projTabs > div > div { /* This is the container which holds the tab content */
+	background: white; /* old browsers */
+	z-index: -2;
+	padding: 20px;
+	border-radius: 0 5px 5px 5px;
+	min-height:280px; /* Change this value if you need more or less content space */
+	position:absolute; /*Fixes IE 7 & 8 */
+	border: 2px solid #E1E2E6;
+	border-top: 0;
+}	
+.projTabs > div:not(:target) > div { 
+	/*position: absolute;*/ /* This keeps the tab module contained */
+}
+
+.projTabs > div:target > div { 
+	/*position: absolute; */
+	/*z-index: 3 !important; *//* Brings the content to the front depending on the tab that was clicked */ 
+}
+
+div.projDetail{
+	width: 40%;
+	height: 100%;
+	border: 2px solid #E1E2E6;
+	border-radius: 10px;
+}
+
+/*日历部分*/
+div.calendar{
+	width: 40%;
+	height: 400px;
+	background-color: white;
+	border: 2px solid #E1E2E6;
+	border-radius: 10px;
+}
+
+div.calHead{
+	height: 50px;
+	line-height: 50px;
+	vertical-align: middle;
+	background-color:#F4F5F7; 
+	color: #B4B4B4;
+	padding-left: 5%;
+	margin-bottom: 2%;
+}
+
+div.calBox{
+	width: 91%;
+	height: 325px;
+	margin:0 auto;
+	background-color: white;
+	padding: 1% 2%;
+}
+
+div.day_names{
+	/*background-color: green;*/
+	height: 30px;
+	line-height: 30px;
+	width: 100%;
+	vertical-align: middle;
+	border-top: 2px solid #B3D5EE;
+	border-bottom: 2px solid #E1E2E6;
+	/*去掉inline-block元素间的空白间隙*/
+	word-spacing: -8px;
+}
+
+div.day_names i{
+	display: inline-block;
+	width: 14.2%;
+	text-align: center;
+	font-family: Arial, Helvetica, sans-serif;
+	/*background-color: orange;*/
+	/*去掉inline-block元素间的空白间隙*/
+	word-spacing:0;
+}
+
+/*div.day_names i:nth-child(odd){
+	background-color: white;
+}*/
+
+div.days{
+	/*去掉inline-block元素间的空白间隙*/
+	word-spacing: -8px;
+}
+
+div.days b,div.days i,div.days a,div.days s{
+	display: inline-block;
+	text-decoration: none;
+	line-height: 40px;
+	height: 40px;
+	vertical-align: middle;
+	width: 13%;
+	text-align: center;
+	/*background-color: orange;*/
+	font-size: 17px;
+	/*去掉inline-block元素间的空白间隙*/
+	word-spacing:0;
+	border: 1px solid white;
+}
+
+div.days a:hover,
+div.days a:focus{
+	border: 1px solid #F7DA77;
+}
+
+/*品牌榜*/
+div.rankingList{
+	width: 58%;
+	height: 400px;
+	background-color: white;
+	border: 2px solid #E1E2E6;
+	border-radius: 10px;
+	margin-left: 1%;
+}
+
+div.rankHead{
+	height: 50px;
+	line-height: 50px;
+	vertical-align: middle;
+	background-color:#F4F5F7; 
+	color: #B4B4B4;
+	padding-left: 5%;
+	margin-bottom: 2%;
+}
+
+div.rankTableBox{
+	width: 85%;
+	height: 300px;
+	margin:0 auto;
+	
+}
+
+table.rankTable{
+	width: 100%;
+	/*使自定义边框显示*/
+	border-collapse: collapse;
+	/*background-color: gray;*/
+}
+
+table.rankTable tr{
+	height: 35px;
+	line-height: 35px;
+	/*background-color: orange;*/
+	text-align: center;
+	vertical-align: middle;
+	border-top: 2px solid #DCDCDC;
+	
+}
+
+table.rankTable tr td,th{
+	border-left: 2px solid #DCDCDC;
+}
+
+table.rankTable tr th:nth-child(1){
+	width: 10%;
+}
+
+table.rankTable tr th:nth-child(2){
+	width: 20%;
+}
+
+table.rankTable tr th:nth-child(3){
+	width: 70%;
+}
+
+table.rankTable tr td:nth-child(1){
+	width: 10%;
+}
+
+table.rankTable tr td:nth-child(2){
+	width: 20%;
+}
+
+table.rankTable tr td:nth-child(3){
+	text-align: left;
+	padding-left: 5%;
+	width: 70%;
+}
+
+table.rankTable tr:nth-child(2) td:nth-child(3)>span{
+	display: inline-block;
+	height: 5px;
+	/*line-height: 5px;*/
+	width: 50%;
+	background-color: #DCDCDC;
+	margin-left: 10%;
+	vertical-align: middle;
+	position: relative;
+}
+
+table.rankTable tr:nth-child(2) td:nth-child(3)>span>span{
+	display: inline-block;
+	width: 80%;
+	height: 5px;
+	background-color: orange;
+	position: absolute;
+}

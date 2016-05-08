@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>IFE JavaScript Task 01</title>
+  </head>
+<body>
+
+  <label>请输入北京今天空气质量：<input id="aqi-input" type="text"></label>
+  <button id="button">确认填写</button>
+
+  <div>您输入的值是：<span id="aqi-display">尚无录入</span></div>
+
+<script type="text/javascript">
+
+(function() {
+
+  /*  
+  在注释下方写下代码
+  给按钮button绑定一个点击事件
+  在事件处理函数中
+  获取aqi-input输入的值，并显示在aqi-display中
+  */
+    var aqiIn = document.getElementById("aqi-input")
+    var btn = document.getElementById("button");
+    var aqiDis = document.getElementById("aqi-display");
+    // 判断输入是否合法,是否是数字（取出数字）
+    // 去掉输入前后的空格
+    
+    // 这边处理函数由两种写法；
+    // 一种是写成函数表达式，那么位置必须在调用之前，不然不出错；
+    // 第二种是写成函数声明，这样位置是无所谓的，因为有函数声明提升
+    // var handler = function()
+    // {
+    //   if(!isNaN(inputVal))
+    //   {
+    //     aqiDis.innerHTML = inputVal;
+    //   }
+    // }
+    function handler()
+    {
+      var inputVal = parseInt(aqiIn.value,10);
+      console.log(aqiIn.value);
+      console.log(inputVal);
+      if(!isNaN(inputVal))
+      {
+        aqiDis.innerHTML = inputVal;
+      }
+    }
+
+    //通用的事件绑定，DOM0 || DOM2 || IE的兼容
+    if(btn.attachEvent){
+      btn.attachEvent("onclick",handler);
+    }
+    else if (btn.addEventListener) {
+      // false 冒泡阶段调用事件处理   true:捕获阶段
+      btn.addEventListener("click",handler,false);
+    }
+    else{
+      btn["onclick"] = handler;
+    }
+})();
+
+</script>
+</body>
+</html>
