@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>ife-2-22-traversing binary tree</title>
+	<style>
+	html{
+		font-size: 62.5%;
+	}
+	html,body{
+		width: 100%;
+		height: 100%;
+		text-align: center;
+	}
+	.vessel{
+		margin: 1rem auto;
+		width: 75%;
+		height: 50%;
+	}
+	div{
+		margin: 1.5rem;
+		border: solid 0.2rem black;
+		display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+        /*flex-grow规定伸缩项目item占父容器剩余空间的比例*/
+		-webkit-flex-grow: 1;
+        -ms-flex-positive: 1;
+        flex-grow: 1;
+        background-color: white;
+	}
+	</style>
+</head>
+<body>
+	<!-- 采用flexbox盒模型 -->
+	<div class="vessel">
+		<div>
+			<div>
+				<div></div>
+				<div></div>
+			</div>
+			<div>
+				<div></div>
+				<div></div>
+			</div>
+		</div>
+		<div>
+			<div>
+				<div></div>
+				<div></div>
+			</div>
+			<div>
+				<div></div>
+				<div></div>
+			</div>
+		</div>
+	</div>
+	
+	<select>
+		<option value="0">--请选择遍历方式--</option>
+		<option value="1">前序遍历</option>
+		<option value="2">中序遍历</option>
+		<option value="3">后序遍历</option>
+	</select>
+	<script>
+	var $ = function(ele){
+		return document.querySelector(ele);
+	}
+	var rootNode = $(".vessel");
+	var selectMethod = $("select");
+	var divAll = document.getElementsByName("div");
+	var stack = [];
+	var timer = null;
+
+	// 前序遍历
+	function preOrder(node){
+	    if(!(node == null)){
+	        stack.push(node);
+	        preOrder(node.firstElementChild);
+	        preOrder(node.lastElementChild);
+	    }
+	}
+
+	//使用递归方式实现中序遍历
+	function inOrder(node){
+	    if(!((node == null))){
+	        inOrder(node.firstElementChild);//先访问左子树
+	        stack.push(node);//再访问根节点
+	        inOrder(node.lastElementChild);//最后访问右子树
+	    }
+	}
+
+	//后序遍历
+	function postOrder(node){
+	    if(!(node == null)){
+	        postOrder(node.firstElementChild);
+	        postOrder(node.lastElementChild);
+	        stack.push(node);
+	    }
+	}
+
+	// 通用的事件绑定函数
+	function addEventHandle(element,type,handler){
+	  if(element.addEventListener){ 
+	    element.addEventListener(type,handler,false);
+	  }
+	  else if(element.attachEvent){
+	    element.attachEvent("on"+type,handler);
+	  }
+	  else
+	  {
+	    element["on"+type] = handler;
+	  }
+	}
+
+	function methodChange(){
+		if(this.value === "0") return;
+		reset();
+		switch(this.value){
+			case "1":
+			preOrder(rootNode);
+			break;
+
+			case "2":
+			inOrder(rootNode);
+			break;
+
+			case "3":
+			postOrder(rootNode);
+			break;
+		}
+		animation();
+	}
+
+	function animation(){
+		var i = 0;
+		var count = stack.length;
+		stack[i].style.backgroundColor = 'orange'
+		timer = setInterval(function () {
+			i++;
+			if (i < count) {
+				stack[i-1].style.backgroundColor = 'white';
+				stack[i].style.backgroundColor = 'orange';
+			} else {
+				clearInterval(timer);
+				stack[count-1].style.backgroundColor = 'white';
+			}
+		},500)
+	}
+
+	function reset(){
+		stack = [];
+		clearInterval(timer);
+	}
+
+	addEventHandle(selectMethod,"change",methodChange);
+	</script>
+</body>
+</html>

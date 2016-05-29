@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>ife-2-19</title>
+	<style>
+	.alighCenter{
+		display: flex;
+		align-items:center;
+		justify-content:center;
+	}
+	html,body{
+		width:100%;
+		height: 100%;
+		margin: 0;
+		padding: 0;
+	}
+	.container{
+		width:70%;
+		height: 60%;
+		/*background-color: #F5F5D5;*/
+	}
+	.showWindow{
+		height: 80%;
+		width: 95%;
+		background-color: orange;
+		border: 5px dotted black;
+		border-radius: 25px;
+		margin: 5px auto;
+		overflow: auto;
+
+		display: flex;
+		align-items:flex-end;
+		justify-content:center;
+	}
+	.showWindow div{
+		width: 1.5%;
+		background-color: #89479B;
+		margin-left: 0.5%;
+		border-radius: 5px 5px 0 0;
+		position: relative;
+	}
+	.showWindow div span{
+		position: absolute;
+		top:-20px;
+	}
+	.ctrlBar{
+		height: 15%;
+		width: 95%;
+		background-color: #FFC0CB;
+		margin:0 auto;
+		border-radius: 10px;
+	}
+	input{
+		width: 10%;
+	}
+	button{
+		width: 8%;
+		height: 70%;
+		border-radius: 10px;
+		margin-left: 10px;
+	}
+	</style>
+</head>
+<body class="alighCenter">
+	<div class="container">
+		<div class="showWindow">
+			
+		</div>
+		<div class="ctrlBar alighCenter">
+			<input type="text" placeholder="10~100之间">
+			<button>左侧进</button>
+			<button>右侧进</button>
+			<button>左侧出</button>
+			<button>右侧出</button>
+			<button>冒泡</button>
+			<button>加载队列</button>
+
+		</div>
+	</div>
+	<script type="text/javascript" src="2-19.js"></script>
+</body>
+</html>

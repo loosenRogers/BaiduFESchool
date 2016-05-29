@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>2-21-抽象、封装</title>
+	<style>
+
+	html{
+		font-size: 62.5%;
+		/*1rem = 16px*/
+		/*设置font-size默认情况为16px，设成62.5之后，1rem = 10px*/
+	}
+	ul{
+		list-style: none;
+		padding: 0;
+	}
+	li{
+		display: inline-block;
+		background-color: purple;
+		color: white;
+		margin-left: 1rem;
+		font-size: 3rem;
+		cursor: default;
+	}
+	.tagInput{
+		width: 21rem;
+	}
+	textarea{
+		display: block;
+		margin-bottom: 1rem;
+	}
+	</style>
+</head>
+<body>
+	<div>
+		<span>Tag:</span>
+		<input type="text" class="tagInput" placeholder="输入空格逗号回车时会自动插入tag">
+		<ul class="tagsList"></ul>
+	</div>
+	
+	<div>
+		<textarea class="hobbiesArea" cols="40" rows="7" placeholder="输入内容通过回车、逗号、顿号、空格等符号作为间隔"></textarea>
+		<button>确认兴趣</button>
+		<ul class="hobbiesLIst"></ul>
+	</div>
+	<script src="2-21.js"></script>
+</body>
+</html>

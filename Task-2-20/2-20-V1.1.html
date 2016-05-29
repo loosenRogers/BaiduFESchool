@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>ife-2-20-模糊匹配</title>
+	<style>
+	html{
+		font-size: 62.5%;
+	}
+	html,body{
+		width:100%;
+		height: 100%;
+		margin: 0;
+		padding: 0;
+	}
+	.container{
+		width:50%;
+		height: 60%;
+		background-color: #F5F5D5;
+	}
+	.headerBox{
+		margin: 0 auto;
+		width: 98%;
+		height: 40%;
+	}
+	button{
+		width: 4rem;
+		height: 2rem;
+	}
+	input{
+		width: 6rem;
+		margin-left: 0.5rem;
+	}
+	.alighCenter{
+		display: flex;
+		align-items:center;
+		justify-content:center;
+	}
+	.showWin{
+		margin: 0 auto;
+		width: 98%;
+		height: 56%;
+		flex-wrap:wrap;
+		background-color: #89479B;
+	}
+	.showWin div{
+		background-color: orange;
+		margin-left: 0.5rem;
+	}
+	.showWin span{
+		background-color: red;
+	}
+	</style>
+</head>
+<body class="alighCenter">
+	<div class="container">
+		<div class="headerBox alighCenter">
+			<textarea name=""  cols="30" rows="7" placeholder="以','隔开元素"></textarea>
+			<button class="input">输入</button>
+			<input type="text">
+			<button class="search">搜索</button>
+		</div>
+		<div class="showWin alighCenter">
+			
+		</div>
+	</div>
+
+	<script>
+	function $(ele){
+		return document.querySelector(ele);
+	}
+
+	var multIn = $("textarea"),
+	    keyValue = $("input"),
+	    inBtn = $(".input"),
+	    searchBtn = $(".search"),
+	    showBox = $(".showWin");
+
+	var charArr = [];
+
+	init();
+
+	function init(){
+		addEventHandler(inBtn,"click",multipleIn);
+		addEventHandler(searchBtn,"click",searchHandler);
+	}
+
+	function multipleIn(){
+		var str = multIn.value;
+		charArr = [];
+		// console.log(typeof(str));
+		charArr = str.split(',');
+		render();
+	}
+
+	function searchHandler(){		
+		var key = keyValue.value;
+		render(key);
+	}
+
+	function render(str){
+		showBox.innerHTML = charArr.map(function(item){
+			if(str != null && str.length>0){
+				var reg = new RegExp(str,"g");
+				item = item.replace(reg,'<span>'+str+'</span>')
+			}
+			return '<div>'+item+'</div>';
+		}).join('');
+	}
+
+	// 通用的事件绑定函数
+	function addEventHandler(element,type,handler){
+	  if(element.addEventListener){ 
+	    element.addEventListener(type,handler,false);
+	  }
+	  else if(element.attachEvent){
+	    element.attachEvent("on"+type,handler);
+	  }
+	  else
+	  {
+	    element["on"+type] = handler;
+	  }
+	}
+	</script>
+</body>
+</html>

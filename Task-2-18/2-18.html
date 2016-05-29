@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>task-2-18</title>
+	<style>
+	.alighCenter{
+		display: flex;
+		align-items:center;
+		justify-content:center;
+	}
+	html,body{
+		width:100%;
+		height: 100%;
+		margin: 0;
+		padding: 0;
+	}
+	.container{
+		width:500px;
+		height: 100px;
+		border: 1px solid black;
+	}
+	.upHead{
+		width: 100%;
+		height: 40%;
+	}
+	input:not(:first-child){
+		width: 65px;
+		margin-left: 5px;
+	}
+	.queue{
+		width: 100%;
+		height: 60%;
+		background-color: gray;
+		overflow: auto;
+	}
+	.queue div{
+		background-color: orange;
+		width: 10%;
+		height: 85%;
+		margin: 2px;
+		text-align: center;
+		/*flex-box中items，在空间不足时不缩小*/
+		flex-shrink:0;
+
+	}
+	</style>
+</head>
+<body class="alighCenter">
+	<div class="container">
+		<div class="upHead alighCenter">
+			<input type="text" id="textIn">
+			<input type="button" id="leftIn" value="左侧进入">
+			<input type="button" id="rightIn" value="右侧进入">
+			<input type="button" id="leftOut" value="左侧出">
+			<input type="button" id="rightOut" value="右侧出">
+		</div>
+		<div class="queue alighCenter">
+
+		</div>
+	</div>
+
+	<script>
+	// 获取标签
+	var leftIn = document.querySelector("#leftIn");
+	var rightIn = document.querySelector("#rightIn");
+	var leftOut = document.querySelector("#leftOut");
+	var rightOut = document.querySelector("#rightOut");
+	var textIn = document.querySelector("#textIn");
+
+	var queueBox = document.querySelector(".queue");
+
+	// 全局数组
+	var numArr = []; 
+
+	// 渲染
+	function render(){
+		textIn.value = '';
+		queueContent = '';
+		// 不能使用for in 输出数组，它会输出排序后的数组
+		for(var i=0;i<numArr.length;i++){
+			queueContent += '<div>' +numArr[i]+ '</div>';
+		}
+		queueBox.innerHTML = queueContent;
+	}
+
+	// 通用的事件绑定函数
+	function addEventHandler(element,type,handler){
+	  if(element.addEventListener){ 
+	    element.addEventListener(type,handler,false);
+	  }
+	  else if(element.attachEvent){
+	    element.attachEvent("on"+type,handler);
+	  }
+	  else
+	  {
+	    element["on"+type] = handler;
+	  }
+	}
+
+	// 点击事件
+	function leftInhandler(){
+		var result = inputCheck();
+		if(result){
+			numArr.unshift(result);
+		}
+		render();
+	}
+
+	function rightInhandler(){
+		var result = inputCheck();
+		if(result){
+			numArr.push(result);
+		}
+		render();
+	}
+
+	function leftOuthandler(){
+		numArr.shift();
+		render();
+	}
+
+	function rightOuthandler(){
+		numArr.pop();
+		render();
+	}
+
+	// 输入检测
+	function inputCheck(){
+		var textValue = textIn.value;
+		if(textValue.length>0)
+		{
+			// 去掉前后空格
+			var valueTrim = parseInt(textValue,10);
+			if(!isNaN(valueTrim))
+				return valueTrim;
+		}
+		else
+		{
+			alert("Please input the number!");
+			return false;
+		}
+	}
+
+	// 初始化
+	function init(){
+		// 进行事件绑定
+		addEventHandler(leftIn,'click',leftInhandler);
+		addEventHandler(rightIn,'click',rightInhandler);
+		addEventHandler(leftOut,'click',leftOuthandler);
+		addEventHandler(rightOut,'click',rightOuthandler);
+	}
+
+	init();
+	</script>
+</body>
+</html>
